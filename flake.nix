@@ -38,6 +38,7 @@
             ninja
             clang-tools
             segger-jlink
+            nrf-command-line-tools
             (nrfutil.withExtensions [ "nrfutil-device" ])
             zephyr-sdk
             zephyr.pythonEnv
