@@ -3,8 +3,12 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
 
+    zephyr.url = "github:nrfconnect/sdk-zephyr/v3.4.99-ncs1";
+    zephyr.flake = false;
+
     zephyr-nix.url = "github:nix-community/zephyr-nix";
     zephyr-nix.inputs.nixpkgs.follows = "nixpkgs";
+    zephyr-nix.inputs.zephyr.follows = "zephyr";
   };
 
   outputs =

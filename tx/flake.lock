@@ -41,11 +41,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1775710090,
-        "narHash": "sha256-ar3rofg+awPB8QXDaFJhJ2jJhu+KqN/PRCXeyuXR76E=",
+        "lastModified": 1776169885,
+        "narHash": "sha256-l/iNYDZ4bGOAFQY2q8y5OAfBBtrDAaPuRQqWaFHVRXM=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "4c1018dae018162ec878d42fec712642d214fdfa",
+        "rev": "4bd9165a9165d7b5e33ae57f3eecbcb28fb231c9",
         "type": "github"
       },
       "original": {
@@ -80,6 +80,7 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs",
+        "zephyr": "zephyr",
         "zephyr-nix": "zephyr-nix"
       }
     },
@@ -122,17 +123,17 @@
     "zephyr": {
       "flake": false,
       "locked": {
-        "lastModified": 1763048108,
-        "narHash": "sha256-NSv0utc4dqeJClldgFxezt0/qNJ1Xb0sh7zN5qa3uVk=",
-        "owner": "zephyrproject-rtos",
-        "repo": "zephyr",
-        "rev": "3568e1b6d5cdd51a6b964a2a1d6d29200fea2056",
+        "lastModified": 1698147699,
+        "narHash": "sha256-wuhgDwTc2XJ6xmB/m2VUxooTILeFPelSLaUX/ipJVw0=",
+        "owner": "nrfconnect",
+        "repo": "sdk-zephyr",
+        "rev": "2e2523efe52a7ac89f0567b8798fd857b1e71ae3",
         "type": "github"
       },
       "original": {
-        "owner": "zephyrproject-rtos",
-        "ref": "v4.3.0",
-        "repo": "zephyr",
+        "owner": "nrfconnect",
+        "ref": "v3.4.99-ncs1",
+        "repo": "sdk-zephyr",
         "type": "github"
       }
     },
@@ -144,7 +145,9 @@
         ],
         "pyproject-nix": "pyproject-nix",
         "uv-python": "uv-python",
-        "zephyr": "zephyr"
+        "zephyr": [
+          "zephyr"
+        ]
       },
       "locked": {
         "lastModified": 1775714408,
