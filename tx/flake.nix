@@ -3,8 +3,12 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
 
+    zephyr.url = "github:nrfconnect/sdk-zephyr/ncs-v3.2.4";
+    zephyr.flake = false;
+
     zephyr-nix.url = "github:nix-community/zephyr-nix";
     zephyr-nix.inputs.nixpkgs.follows = "nixpkgs";
+    zephyr-nix.inputs.zephyr.follows = "zephyr";
   };
 
   outputs =
@@ -28,7 +32,7 @@
           };
         };
         zephyr = zephyr-nix.packages.${system};
-        zephyr-sdk = (zephyr.sdk-0_16.override { targets = [ "arm-zephyr-eabi" ]; });
+        zephyr-sdk = (zephyr.sdk-0_17.override { targets = [ "arm-zephyr-eabi" ]; });
       in
       {
         devShells.default = pkgs.mkShell {
